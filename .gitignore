@@ -4,3 +4,12 @@ node_modules/
 dist/
 .DS_Store
 *.local
+.idea/
+.venv/
+__pycache__/
+*.pyc
+
+frontend/node_modules/
+frontend/dist/
+
+*.zip
