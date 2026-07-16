@@ -670,6 +670,29 @@ footer { border-top: 1px solid var(--line); background: var(--paper); }
   content: ''; position: absolute; top: .72em; left: 3px; width: 5px; height: 5px;
   border-radius: 50%; background: var(--orange);
 }
+.privacy-modal-body .privacy-bullet-item {
+  display: grid;
+  grid-template-columns: 14px minmax(0, 1fr);
+  column-gap: 10px;
+  align-items: start;
+  margin: 0 0 4px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+.privacy-modal-body .privacy-bullet-mark {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: var(--orange);
+  font-size: 16px;
+  line-height: 1.75;
+}
+.privacy-modal-body .privacy-bullet-text {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  line-height: 1.75;
+}
 .terms-spacer { height: 5px; }
 .terms-modal-footer {
   display: flex; justify-content: flex-end; gap: 8px; flex: 0 0 auto;

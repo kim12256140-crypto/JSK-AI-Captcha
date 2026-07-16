@@ -77,11 +77,12 @@ function renderBody(text) {
     if (!line.trim()) return <div key={i} style={{ height: 6 }} />;
     if (line.startsWith('•')) {
       return (
-        <div key={i} style={{ display: 'grid', gridTemplateColumns: '8px minmax(0, 1fr)', columnGap: 10, alignItems: 'start', margin: '0 0 4px', paddingLeft: 4 }}>
-          <span aria-hidden="true" style={{ width: 8, height: '1.75em', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', transform: 'translateY(-2px)' }}>
-            <span style={{ display: 'block', width: 4, height: 4, borderRadius: 999, background: 'var(--orange)' }} />
+        <div key={i} className="privacy-bullet-item">
+          <span className="privacy-bullet-mark" aria-hidden="true">
+            •
           </span>
-          <span style={{ fontSize: 13.5, color: 'var(--ink-soft)', lineHeight: 1.75 }}>{line.slice(1).trim()}</span>
+          <span className="privacy-bullet-text">{line.slice(1).trim()}</span>
+
         </div>
       );
     }
@@ -168,7 +169,7 @@ export default function PrivacyModal({ onClose }) {
                 margin: '0 0 10px', letterSpacing: '-.01em',
                 paddingBottom: 8, borderBottom: '1px solid var(--line-soft)',
               }}>{s.title}</p>
-              <div>{renderBody(s.body)}</div>
+              <div className="privacy-modal-body">{renderBody(s.body)}</div>
             </div>
           ))}
         </div>
